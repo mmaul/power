@@ -1,9 +1,9 @@
 Utilities for power control via upowerd 
 
 ** Features
-# Suspend on laptop close for stumpwm.
-# Suspend command
-# Hibernate command
++ Suspend on laptop close for stumpwm.
++ Suspend command
++ Hibernate command
 
 ** Installation
 Clone repo
