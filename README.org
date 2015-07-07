@@ -1,0 +1,37 @@
+Utilities for power control via upowerd 
+Features
+# Suspend on laptop close for stumpwm.
+# Suspend command
+# Hibernate command
+
+** Installation
+Clone repo
+    git clone https://github.com/mmaul/power.git ~/.stumpwm.d/moduls/util/power
+
+** Usage
+*** For suspend on laptop lid close: 
+#+BEGIN_SRC lisp
+(load-module "power")
+(power:start-laptop-lid-watcher)
+#+END_SRC
+to =.stumpwmrc=
+
+Default time to sleep is 5 seconds =*laptop-lid-watcher-interval*=
+
+Default lid state patch if determined from
+"/proc/acpi/button/lid/LID/state" =*lid-state-path*=
+
+Default lid state open pattern is "state:\\s+open"
+=*lid-state-open-pattern*=
+
+Default lid state open pattern is "state:\\s+closed" =*lid-state-closed-pattern*=
+
+*** Commands
+# suspend - suspend computer
+# hibernate - hibernate computer
+
+*** Exported functions
+# do-suspend
+# do-hibernate
+# start-laptop-lid-watcher
+# stop-laptop-lid-watcher
